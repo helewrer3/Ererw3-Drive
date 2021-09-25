@@ -1,7 +1,7 @@
 # Ererw3 Drive
 A google drive type application made using [React](https://reactjs.org/) and [Firebase](https://firebase.google.com/).
 
-### The webapp will be deployed soon.
+### The webapp has now been deployed on [Github Pages](https://helewrer3.github.io/Ererw3-Drive).
 
 ## Technologies Used
 + ReactJS
@@ -13,6 +13,7 @@ A google drive type application made using [React](https://reactjs.org/) and [Fi
 + Bootstrap
 + React Bootstrap
 + UUID
++ React GH Pages
 + HTML, CSS, Javascript
 
 ## Usage
