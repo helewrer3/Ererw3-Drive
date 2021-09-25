@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {HashRouter as Router, Route, Switch} from 'react-router-dom';
 import {AuthProvider} from '../contexts/AuthContext';
 import Signup from './authentication/Signup';
 import Profile from './authentication/Profile';
@@ -11,7 +11,7 @@ import Dashboard from './drive/Dashboard';
 
 const App = () => {
     return (
-        <BrowserRouter>
+        <Router>
             <AuthProvider>
                 <Switch>
                     {/* Drive */}
@@ -26,7 +26,7 @@ const App = () => {
                     <Route path='/forgot-password' component={ForgotPassword}/>
                 </Switch>
             </AuthProvider>
-        </BrowserRouter>
+        </Router>
     );
 }
 
