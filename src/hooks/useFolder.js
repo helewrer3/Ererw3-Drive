@@ -8,7 +8,7 @@ const ACTIONS = {
     SET_CHILD_FOLDERS: 'set-child-folders',
     SET_CHILD_FILES: 'set-child-files',
 }
-
+const USER_ID = "userID", PARENT_ID = "parentID", FOLDER_ID = "folderID";
 export const ROOT_FOLDER = {name: 'root', id: null, path: []}
 
 const reducer = (state, {type, payload}) => {
@@ -45,7 +45,7 @@ const useFolder = (folderId = null, folder = null) => {
     }, [folderId])
 
     useEffect(() => {
-        const cleanup = database.folders.where("parentId", "==",  folderId).where("userId", "==", currentUser.uid).onSnapshot((snapshot) => {
+        const cleanup = database.folders.where(PARENT_ID, "==",  folderId).where(USER_ID, "==", currentUser.uid).onSnapshot((snapshot) => {
             dispatch({
                 type: ACTIONS.SET_CHILD_FOLDERS, 
                 payload: {childFolders: snapshot.docs.map(database.formatDoc)}
@@ -55,7 +55,7 @@ const useFolder = (folderId = null, folder = null) => {
     }, [folderId, currentUser])
 
     useEffect(() => {
-        const cleanup = database.files.where("folderId", "==",  folderId).where("userId", "==", currentUser.uid).onSnapshot((snapshot) => {
+        const cleanup = database.files.where(FOLDER_ID, "==",  folderId).where(USER_ID, "==", currentUser.uid).onSnapshot((snapshot) => {
             dispatch({
                 type: ACTIONS.SET_CHILD_FILES, 
                 payload: {childFiles: snapshot.docs.map(database.formatDoc)}
