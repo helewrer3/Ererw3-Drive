@@ -25,16 +25,25 @@ A google drive type application made using [React](https://reactjs.org/) and [Fi
 To run this app locally, you need to have [NodeJS](https://nodejs.org/en/) and [React](https://reactjs.org/) installed in your system.
 
 ## Deploying Locally
-+ Clone the repo locally.
-+ Make a `.env.local` file and populate the following fields inside it with the corresponding Firebase Configuration values -
-    + ```
-      REACT_APP_FIREBASE_API_KEY                //apiKey
-      REACT_APP_FIREBASE_AUTH_DOMAIN            //authDomain
-      REACT_APP_FIREBASE_PROJECT_ID             //projectId
-      REACT_APP_FIREBASE_STORAGE_BUCKET         //storageBucket
-      REACT_APP_FIREBASE_MESSAGING_SENDER_ID    //messagingSenderId
-      REACT_APP_FIREBASE_MESSAGING_APP_ID       //appId
-+ Run the following commands - 
-    + ```
-      npm install
-      npm start
+* Clone the repo locally.
+* Make a `.env.local` file and populate the following fields inside it with the corresponding Firebase Configuration values -
+```
+REACT_APP_FIREBASE_API_KEY                //apiKey
+REACT_APP_FIREBASE_AUTH_DOMAIN            //authDomain
+REACT_APP_FIREBASE_PROJECT_ID             //projectId
+REACT_APP_FIREBASE_STORAGE_BUCKET         //storageBucket
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID    //messagingSenderId
+REACT_APP_FIREBASE_MESSAGING_APP_ID       //appId
+```
+* Install dependencies
+```bash
+npm install
+#OR
+yarn
+```
+* Run
+```bash
+npm start
+#OR
+yarn start
+```
